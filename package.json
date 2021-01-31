@@ -1,0 +1,24 @@
+{
+  "name": "node_online_shop",
+  "version": "1.0.0",
+  "description": "курс по node.js",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/westerovs/NODEJS--online-store.git"
+  },
+  "author": "Александр Вестеровский",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/westerovs/NODEJS--online-store/issues"
+  },
+  "homepage": "https://github.com/westerovs/NODEJS--online-store#readme"
+}

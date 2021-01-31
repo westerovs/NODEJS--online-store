@@ -1,24 +1,17 @@
-console.log('*** RUN SERVER ***')
+// node app.js - run
+const express = require('express')
+const app = express()
 
-const http = require('http')
+// public - имя папки, где хранится статика
+app.use(express.static('public'))
 
-http.createServer((request, response) => {
-    if (request.url === '/') response.end('MAIN')
-    else if (request.url === '/xxx') response.end('xxx site')
+// слушать порт по умолчанию
+app.listen(3000, () => {
+    console.log('*** RUN SERVER ***')
+})
 
-}).listen(3000)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.get('/xxx', (req, res) => {
+    console.log('load /')
+    res.render('index.html')
+})
 

@@ -1,8 +1,9 @@
-подключить модуль 'http'
-const http = require('http')
 
-запустить модуль
-http.creatrServer()
+const http = require('http') // подключить модуль 'http'
+const fs   = require('fs')   // подключить модуль fs
+
+
+http.creatrServer() // запустить модуль
 
 http.createServer((request, response) => {
     response.end('HELLO !!!')
