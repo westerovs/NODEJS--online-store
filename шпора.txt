@@ -1,0 +1,34 @@
+подключить модуль 'http'
+const http = require('http')
+
+запустить модуль
+http.creatrServer()
+
+http.createServer((request, response) => {
+    response.end('HELLO !!!')
+}).listen(3000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
