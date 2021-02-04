@@ -7,8 +7,12 @@ const app = express()
 app.use(express.static('public'))
 app.set('view engine', 'pug') // подключить pug
 
-
 // слушать порт по умолчанию
 app.listen(3000, () => console.log('*** RUN SERVER ***'))
-app.get('/pug', (req, res) => res.render('main.pug'))
 
+// app.get('/pug', (req, res) => res.render('main.pug'))
+
+app.get('/pug', (req, res) => res.render('main.pug', {
+    name: 'Alexander',
+    course: 'Node.js'
+}))
