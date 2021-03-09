@@ -1,8 +1,9 @@
 include header
 
-h1 PUG say: <br> HELLO HELLO как дела бро ? yo!
-h2 #{ name + ' '+ course }
+h1 1 PUG say: <br> HELLO HELLO как дела бро ? yo!
+h2 #{'2 ' + name + ' '+ course }
 
+// each - спец. синтаксис массивов
 each item, index in goods
     p #{ item['name'] }
 
@@ -10,6 +11,6 @@ each item, index in goods
         src='images/'+item['image']
         class="test"
         alt="img"
-        )
+    )
 
 

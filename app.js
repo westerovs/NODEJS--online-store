@@ -1,26 +1,25 @@
 // node app.js - run
-
 const express = require('express')
 const app     = express()
 
 app.use(express.static('public')) // имя папки, где хранится статика
 app.set('view engine', 'pug') // подключить pug
 
-// подключить mysql модуль
-const mysql = require('mysql')
-// настроить модуль, connector - для обращ. к базе данных
-const con   = mysql.createConnection({
-    host    : 'localhost',
-    user    : 'root',
+const mysql = require('mysql') // подключить mysql модуль
+
+// connector - для обращ. к базе данных
+const connector = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
     password: 'root',
-    database: 'market'
+    database: 'market' // имя базы данных в WorkBench
 })
 
 // слушать порт по умолчанию
 app.listen(3000, () => console.log('*** RUN SERVER ***'));
 
 app.get('/', (req, res) => {
-    con.query('SELECT * FROM goods', (error, result) => {
+    connector.query('SELECT * FROM goods', (error, result) => {
         if (error) throw error;
 
         let goods = {}
@@ -31,8 +30,8 @@ app.get('/', (req, res) => {
 
         // render в html
         res.render('main.pug', {
-            name  : 'Alexander',
-            course: 'Node.js',
+            name  : 'Alexander 777',
+            course: 'Node.js ля ля ля',
             goods: JSON.parse(JSON.stringify(goods))
         })
     })
